@@ -3,10 +3,16 @@ package main
 import (
 	"github.com/go-chassis/go-chassis-bench/util"
 	"github.com/urfave/cli"
+	"log"
+	"net/http"
+	_ "net/http/pprof"
 	"os"
 )
 
 func main() {
+	go func() {
+		log.Println(http.ListenAndServe("localhost:6060", nil))
+	}()
 	app := cli.NewApp()
 	app.Name = "go-chassis benchmark tool"
 	app.Description = "example: ./benchmark -c 10 -d 30s -u http://service/hello"

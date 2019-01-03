@@ -1,13 +1,21 @@
 module github.com/go-chassis/go-chassis-bench
 
 require (
-	github.com/go-chassis/go-chassis v1.1.3
+	github.com/beorn7/perks v0.0.0-20180321164747-3a771d992973 // indirect
+	github.com/eapache/go-resiliency v1.1.0 // indirect
+	github.com/eapache/go-xerial-snappy v0.0.0-20180814174437-776d5712da21 // indirect
+	github.com/eapache/queue v1.1.0 // indirect
+	github.com/go-chassis/go-chassis v1.1.4-0.20181229013401-5f71502961a2
 	github.com/go-mesh/openlogging v0.0.0-20181205082104-3d418c478b2d
-	github.com/json-iterator/go v1.1.5 // indirect
-	github.com/modern-go/reflect2 v1.0.1 // indirect
+	github.com/golang/snappy v0.0.0-20180518054509-2e65f85255db // indirect
+	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
+	github.com/opentracing-contrib/go-observer v0.0.0-20170622124052-a52f23424492 // indirect
 	github.com/pierrec/lz4 v2.0.5+incompatible // indirect
+	github.com/prometheus/client_model v0.0.0-20180712105110-5c3871d89910 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20181016184325-3113b8401b8a
 	github.com/urfave/cli v1.20.1-0.20181029213200-b67dcf995b6a
+	golang.org/x/text v0.3.0 // indirect
+	google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8 // indirect
 )
 
 replace (
