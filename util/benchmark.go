@@ -3,9 +3,9 @@ package bench
 import (
 	"context"
 	"fmt"
-	"github.com/go-chassis/go-chassis"
-	"github.com/go-chassis/go-chassis/core"
-	"github.com/go-mesh/openlogging"
+	"github.com/go-chassis/go-chassis/v2"
+	"github.com/go-chassis/go-chassis/v2/core"
+	"github.com/go-chassis/openlog"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
@@ -28,7 +28,7 @@ func ReadBody() []byte {
 	if err != nil {
 		panic(err)
 	}
-	openlogging.GetLogger().Infof("message size: %d", n)
+	openlog.Info(fmt.Sprintf("message size: %d", n))
 	return b
 }
 func Benchmark() {
@@ -63,7 +63,7 @@ func Benchmark() {
 		ctx, cancel := context.WithCancel(context.Background())
 		b := ReadBody()
 		for i := 0; i < concurrency; i++ {
-			openlogging.GetLogger().Info("launched one http benchmark thread")
+			openlog.Info("launched one http benchmark thread")
 			cancels = append(cancels, cancel)
 			go callHTTP(ctx, invoker, Configs.Method, u.String(), b)
 		}

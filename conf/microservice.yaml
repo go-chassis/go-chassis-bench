@@ -1,6 +1,7 @@
 ---
 #微服务的私有属性
 #APPLICATION_ID: CSE #optional
-service_description:
-  name: benchmark
+servicecomb:
+  service:
+    name: benchmark
   #version: 0.1 #optional
